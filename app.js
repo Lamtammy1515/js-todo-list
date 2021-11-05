@@ -20,15 +20,15 @@ function addTodo(e){
     newTodo.innerText = 'hey';
     newTodo.classList.add('todo-item')
     todoDiv.appendChild(newTodo);
-
+    //check button
     const completedButton = document.createElement('button')
     completedButton.innerHTML = '<i class="fas fa-check"></i>'
     completedButton.classList.add("complete-btn")
     todoList.appendChild(completedButton)
-
+    //delete button
     const trashButton = document.createElement('button')
     trashButton.innerHTML = '<i class="fas fa-trash"></i>'
-    trashButton.classList.add("complete-btn")
+    trashButton.classList.add("trash-btn")
     todoList.appendChild(trashButton)
 
     todoList.appendChild(todoDiv)
