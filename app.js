@@ -1,5 +1,5 @@
 //selector
-const todo = document.querySelector('.todo-input')
+const todoInput = document.querySelector('.todo-input')
 const todoButton = document.querySelector('.todo-button')
 const todoList = document.querySelector('.todo-list')
 
@@ -17,7 +17,7 @@ function addTodo(e){
     todoDiv.classList.add("todo")
     //create li 
     const newTodo = document.createElement("li");
-    newTodo.innerText = 'hey';
+    newTodo.innerText = todoInput.value ;
     newTodo.classList.add('todo-item')
     todoDiv.appendChild(newTodo);
     //check button
