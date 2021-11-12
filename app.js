@@ -41,7 +41,8 @@ function addTodo(e){
 function deleteCheck(e) {
  const item = e.target;
  //delete
- if(item.classList[0] === 'trash-btn'){
-     todoInput.remove()
+ if (item.classList[0] === 'trash-btn'){
+     const todo = item.parentElement;
+     todo.remove();
  }
 }
