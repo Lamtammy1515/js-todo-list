@@ -32,4 +32,7 @@ function addTodo(e){
     todoList.appendChild(trashButton)
 
     todoList.appendChild(todoDiv)
+
+    //clear input value
+    todoInput.value = "";
 }
