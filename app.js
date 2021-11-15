@@ -24,7 +24,7 @@ function addTodo(e){
     const completedButton = document.createElement('button')
     completedButton.innerHTML = '<i class="fas fa-check"></i>'
     completedButton.classList.add("complete-btn")
-    todoList.appendChild(completedButton)
+    todoDiv.appendChild(completedButton)
     //delete button
     const trashButton = document.createElement('button')
     trashButton.innerHTML = '<i class="fas fa-trash"></i>'
@@ -42,6 +42,7 @@ function deleteCheck(e) {
  //delete
  if (item.classList[0] === 'trash-btn'){
      const todo = item.parentElement;
+     todo.classList.add("fall")
      todo.remove();
  }
 
