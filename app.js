@@ -12,7 +12,6 @@ todoList.addEventListener('click', deleteCheck);
 
 function addTodo(e){
     e.preventDefault()
-    console.log('hello')
     //todo div
     const todoDiv = document.createElement('div');
     todoDiv.classList.add("todo")
@@ -44,5 +43,10 @@ function deleteCheck(e) {
  if (item.classList[0] === 'trash-btn'){
      const todo = item.parentElement;
      todo.remove();
+ }
+
+ if(item.classList[0] === "complete-btn"){
+     const todo = item.parentElement
+     todo.classList.toggle('completed');
  }
 }
