@@ -63,13 +63,19 @@ function filterTodo(e){
         switch (e.target.value) {
             case "all":
                 todo.style.display = "flex"
-              //  break;
+                break;
             case "completed":
                 if(todo.classList.contains("completed")){
                     todo.style.display = "flex";
                 } else {
                     todo.style.display = "none";
                 }
-        }
+            case "uncompleted":
+                if(!todo.classList.contains("completed"){
+                    todo.style.display = "flex";
+                }else {
+                    todo.style.display = "none"
+                }
+            }
     })
 }
