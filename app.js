@@ -21,6 +21,9 @@ function addTodo(e){
     newTodo.innerText = todoInput.value ;
     newTodo.classList.add('todo-item')
     todoDiv.appendChild(newTodo);
+
+    // ADD TODO TO LOCALSTORAGE 
+    saveLocalTodos(todoInput.value)
     //check button
     const completedButton = document.createElement('button')
     completedButton.innerHTML = '<i class="fas fa-check"></i>'
@@ -89,7 +92,7 @@ function saveLocalTodos(todo) {
     }else {
         todos = JSON.parse(localStorage.getItem('todos'));
     }
-    
+
     todos.push(todo);
     localStorage.setItem('todos', JSON.stringify(todos));
 }
