@@ -104,4 +104,29 @@ function getTodos(){
     }else {
         todos = JSON.parse(localStorage.getItem('todos'));
     }
+
+    todos.forEach(function(todo){
+        e.preventDefault()
+    //todo div
+    const todoDiv = document.createElement('div');
+    todoDiv.classList.add("todo")
+    //create li 
+    const newTodo = document.createElement("li");
+    newTodo.innerText = todo;
+    newTodo.classList.add('todo-item')
+    todoDiv.appendChild(newTodo);
+
+    //check button
+    const completedButton = document.createElement('button')
+    completedButton.innerHTML = '<i class="fas fa-check"></i>'
+    completedButton.classList.add("complete-btn")
+    todoDiv.appendChild(completedButton)
+    //delete button
+    const trashButton = document.createElement('button')
+    trashButton.innerHTML = '<i class="fas fa-trash"></i>'
+    trashButton.classList.add("trash-btn")
+    todoDiv.appendChild(trashButton)
+
+    todoList.appendChild(todoDiv)
+    })
 }
