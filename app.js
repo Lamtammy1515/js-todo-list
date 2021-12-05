@@ -140,5 +140,5 @@ function removeLocalTodos(todo){
     }else {
         todos = JSON.parse(localStorage.getItem('todos'));
     }
-    
+    console.log(todo)
 }
