@@ -134,5 +134,11 @@ function getTodos(){
 }
 
 function removeLocalTodos(todo){
+    let todos;
+    if(localStorage.getItem("todo") === null){
+        todos = []
+    }else {
+        todos = JSON.parse(localStorage.getItem('todos'));
+    }
     
 }
